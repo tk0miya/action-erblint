@@ -32,3 +32,6 @@ runs:
         INPUT_REPORTER: ${{ inputs.reporter }}
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
         INPUT_USE_BUNDLER: ${{ inputs.use_bundler }}
+branding:
+  icon: check-circle
+  color: blue
