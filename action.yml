@@ -8,6 +8,9 @@ inputs:
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
+  fail_on_error:
+    description: 'Exit code 1 for reviewdog if it finds errors [true,false]'
+    default: 'false'
   reporter:
     description: |
       Reporter of reviewdog command [github-pr-check,github-check,github-pr-review].
@@ -29,6 +32,7 @@ runs:
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_LEVEL: ${{ inputs.level }}
+        INPUT_FAIL_ON_ERROR: ${{ inputs.fail_on_error }}
         INPUT_REPORTER: ${{ inputs.reporter }}
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
         INPUT_USE_BUNDLER: ${{ inputs.use_bundler }}

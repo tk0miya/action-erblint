@@ -15,6 +15,11 @@ code review experience.
 Optional. Report level for reviewdog [`info`, `warning`, `error`].
 The default is `error`.
 
+### `fail_on_error`
+
+Optional. Exit code 1 for reviewdog if it finds errors [`true`, `false`].
+The default is `false`.
+
 ### `reporter`
 
 Optional. Reporter of reviewdog command [`github-pr-check`, `github-check`, `github-pr-review`].
