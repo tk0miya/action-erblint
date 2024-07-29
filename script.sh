@@ -20,8 +20,14 @@ else
   BUNDLE_EXEC="bundle exec "
 fi
 
+if [ -z "${INPUT_CONFIG_FILE}" ]; then
+  CONFIG_FILE="--config=.erb-lint.yml"
+else
+  CONFIG_FILE="--config=${INPUT_CONFIG_FILE}"
+fi
+
 echo '::group:: Running erb-lint with reviewdog 🐶 ...'
-${BUNDLE_EXEC}erblint --lint-all --format compact \
+${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
       -reporter="${INPUT_REPORTER}" \

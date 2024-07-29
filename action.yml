@@ -24,6 +24,12 @@ inputs:
   use_bundler:
     description: "Run erb-lint with bundle exec. Default: `false`"
     default: 'false'
+  config_file:
+    description: |
+      Config file to pass to erb-lint.
+      Default is .erb-lint.yml.
+    default: '.erb-lint.yml'
+
 runs:
   using: 'composite'
   steps:
@@ -36,6 +42,7 @@ runs:
         INPUT_REPORTER: ${{ inputs.reporter }}
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
         INPUT_USE_BUNDLER: ${{ inputs.use_bundler }}
+        INPUT_CONFIG_FILE: ${{ inputs.config_file }}
 branding:
   icon: check-circle
   color: blue
