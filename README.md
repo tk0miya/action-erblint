@@ -15,10 +15,10 @@ code review experience.
 Optional. Report level for reviewdog [`info`, `warning`, `error`].
 The default is `error`.
 
-### `fail_on_error`
+### `fail_level`
 
-Optional. Exit code 1 for reviewdog if it finds errors [`true`, `false`].
-The default is `false`.
+Optional. Exit code 1 for reviewdog if it finds at least 1 issue with severity greater than or equal to the given level [`none`, `any`, `info`, `warning`, `error`].
+The default is `none`.
 
 ### `reporter`
 

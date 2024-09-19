@@ -27,5 +27,5 @@ ${BUNDLE_EXEC}erblint --lint-all --format compact \
       -reporter="${INPUT_REPORTER}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -level="${INPUT_LEVEL}" \
-      -fail-on-error="${INPUT_FAIL_ON_ERROR}"
+      -fail-level="${INPUT_FAIL_LEVEL}"
 echo '::endgroup::'
