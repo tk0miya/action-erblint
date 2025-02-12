@@ -33,5 +33,6 @@ ${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
       -reporter="${INPUT_REPORTER}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -level="${INPUT_LEVEL}" \
+      -fail-level="${INPUT_FAIL_LEVEL}" \
       -fail-on-error="${INPUT_FAIL_ON_ERROR}"
 echo '::endgroup::'
