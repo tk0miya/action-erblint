@@ -26,6 +26,12 @@ else
   CONFIG_FILE="--config=${INPUT_CONFIG_FILE}"
 fi
 
+if [ -z "${INPUT_TOOL_NAME}" ]; then
+  TOOL_NAME="erb-lint"
+else
+  TOOL_NAME="${INPUT_TOOL_NAME}"
+fi
+
 echo '::group:: Running erb-lint with reviewdog 🐶 ...'
 ${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
   | reviewdog \
@@ -33,6 +39,7 @@ ${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
       -reporter="${INPUT_REPORTER}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -level="${INPUT_LEVEL}" \
+      -name="${TOOL_NAME}" \
       -fail-level="${INPUT_FAIL_LEVEL}" \
       -fail-on-error="${INPUT_FAIL_ON_ERROR}"
 echo '::endgroup::'

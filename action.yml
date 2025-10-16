@@ -38,6 +38,9 @@ inputs:
       Config file to pass to erb-lint.
       Default is .erb-lint.yml.
     default: '.erb-lint.yml'
+  tool_name:
+    description: 'Tool name to be displayed in the reviewdog comment. Default: `erb-lint`'
+    default: 'erb-lint'
 
 runs:
   using: 'composite'
@@ -53,6 +56,7 @@ runs:
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
         INPUT_USE_BUNDLER: ${{ inputs.use_bundler }}
         INPUT_CONFIG_FILE: ${{ inputs.config_file }}
+        INPUT_TOOL_NAME: ${{ inputs.tool_name }}
 branding:
   icon: check-circle
   color: blue
