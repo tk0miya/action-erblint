@@ -1,4 +1,7 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+
+set -euo pipefail
+
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
 TEMP_PATH="$(mktemp -d)"
