@@ -1,5 +1,5 @@
-name: 'Run erb-lint with reviewdog'
-description: '🐶 Run erb-lint with reviewdog on pull requests to improve code review experience.'
+name: 'Run erb_lint with reviewdog'
+description: '🐶 Run erb_lint with reviewdog on pull requests to improve code review experience.'
 author: 'tk0miya'
 inputs:
   github_token:
@@ -31,11 +31,11 @@ inputs:
       Default is added.
     default: 'added'
   use_bundler:
-    description: "Run erb-lint with bundle exec. Default: `false`"
+    description: "Run erb_lint with bundle exec. Default: `false`"
     default: 'false'
   config_file:
     description: |
-      Config file to pass to erb-lint.
+      Config file to pass to erb_lint.
       Default is .erb_lint.yml.
     default: '.erb_lint.yml'
 

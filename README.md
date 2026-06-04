@@ -1,6 +1,6 @@
-# GitHub Action: Run erb-lint with reviewdog 🐶
+# GitHub Action: Run erb_lint with reviewdog 🐶
 
-This action runs [erb-lint](https://github.com/Shopify/erb-lint) with
+This action runs [erb_lint](https://github.com/Shopify/erb_lint) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
 code review experience.
 

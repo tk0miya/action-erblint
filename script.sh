@@ -12,7 +12,7 @@ curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.s
 echo '::endgroup::'
 
 if [ "${INPUT_USE_BUNDLER}" = "true" ]; then
-  echo '::group:: Installing erb-lint via bundler'
+  echo '::group:: Installing erb_lint via bundler'
   bundle install
   echo '::endgroup::'
 fi
@@ -29,8 +29,8 @@ else
   CONFIG_FILE="--config=${INPUT_CONFIG_FILE}"
 fi
 
-echo '::group:: Running erb-lint with reviewdog 🐶 ...'
-${BUNDLE_EXEC}erblint \
+echo '::group:: Running erb_lint with reviewdog 🐶 ...'
+${BUNDLE_EXEC}erb_lint \
   --lint-all \
   --format compact \
   --fail-level F \
