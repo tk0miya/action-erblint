@@ -37,6 +37,7 @@ ${BUNDLE_EXEC}erblint \
   ${CONFIG_FILE} \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
+      -name=erb_lint \
       -reporter="${INPUT_REPORTER}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -level="${INPUT_LEVEL}" \
