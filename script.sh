@@ -21,7 +21,7 @@ else
 fi
 
 if [ -z "${INPUT_CONFIG_FILE}" ]; then
-  CONFIG_FILE="--config=.erb-lint.yml"
+  CONFIG_FILE="--config=.erb_lint.yml"
 else
   CONFIG_FILE="--config=${INPUT_CONFIG_FILE}"
 fi
