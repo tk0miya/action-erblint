@@ -33,6 +33,7 @@ echo '::group:: Running erb-lint with reviewdog 🐶 ...'
 ${BUNDLE_EXEC}erblint \
   --lint-all \
   --format compact \
+  --fail-level F \
   ${CONFIG_FILE} \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
