@@ -30,7 +30,10 @@ else
 fi
 
 echo '::group:: Running erb-lint with reviewdog 🐶 ...'
-${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
+${BUNDLE_EXEC}erblint \
+  --lint-all \
+  --format compact \
+  ${CONFIG_FILE} \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
       -reporter="${INPUT_REPORTER}" \
