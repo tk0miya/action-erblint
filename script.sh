@@ -1,4 +1,7 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+
+set -euo pipefail
+
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
 TEMP_PATH="$(mktemp -d)"
@@ -27,7 +30,11 @@ else
 fi
 
 echo '::group:: Running erb-lint with reviewdog 🐶 ...'
-${BUNDLE_EXEC}erblint --lint-all --format compact ${CONFIG_FILE} \
+${BUNDLE_EXEC}erblint \
+  --lint-all \
+  --format compact \
+  --fail-level F \
+  ${CONFIG_FILE} \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
       -reporter="${INPUT_REPORTER}" \
