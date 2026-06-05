@@ -36,8 +36,8 @@ inputs:
   config_file:
     description: |
       Config file to pass to erb-lint.
-      Default is .erb-lint.yml.
-    default: '.erb-lint.yml'
+      Default is .erb_lint.yml.
+    default: '.erb_lint.yml'
 
 runs:
   using: 'composite'
