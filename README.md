@@ -37,6 +37,10 @@ The default is `github-pr-review`.
 Optional. Filtering mode for the reviewdog command [`added`, `diff_context`, `file`, `nofilter`].
 Default is `added`.
 
+### `config_file`
+
+Optional. Config file to pass to erb_lint. Default: `.erb_lint.yml`.
+
 ### `use_bundler`
 
 Optional. Run erb_lint with bundle exec. Default: `false`.
