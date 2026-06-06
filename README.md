@@ -37,10 +37,6 @@ The default is `github-pr-review`.
 Optional. Filtering mode for the reviewdog command [`added`, `diff_context`, `file`, `nofilter`].
 Default is `added`.
 
-### `skip_install`
-
-Optional. Do not install Rubocop or its extensions. Default: `false`.
-
 ### `use_bundler`
 
 Optional. Run Rubocop with bundle exec. Default: `false`.
