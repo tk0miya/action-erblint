@@ -46,7 +46,7 @@ runs:
   using: 'composite'
   steps:
     - run: $GITHUB_ACTION_PATH/script.sh
-      shell: sh
+      shell: bash
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_LEVEL: ${{ inputs.level }}
