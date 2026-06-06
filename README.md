@@ -39,7 +39,7 @@ Default is `added`.
 
 ### `use_bundler`
 
-Optional. Run Rubocop with bundle exec. Default: `false`.
+Optional. Run erb_lint with bundle exec. Default: `false`.
 
 ### `tool_name`
 
