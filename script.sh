@@ -40,7 +40,7 @@ ${BUNDLE_EXEC}erb_lint \
   --lint-all \
   --format compact \
   --fail-level F \
-  ${CONFIG_FILE} \
+  "${CONFIG_FILE}" \
   | reviewdog \
       -efm="%f:%l:%c: %m" \
       -reporter="${INPUT_REPORTER}" \
