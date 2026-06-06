@@ -45,14 +45,20 @@ Optional. Do not install Rubocop or its extensions. Default: `false`.
 
 Optional. Run Rubocop with bundle exec. Default: `false`.
 
+### `tool_name`
+
+Optional. Tool name to be displayed in the reviewdog comment.
+Useful when you have multiple linters running in a single workflow.
+Default: `erb_lint`.
+
 ## Example usage
 
 ```yml
 name: reviewdog
 on: [pull_request]
 jobs:
-  erb-lint:
-    name: runner / erb-lint
+  erb_lint:
+    name: runner / erb_lint
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -60,7 +66,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.0
-      - name: erb-lint
+      - name: erb_lint
         uses: reviewdog/action-erblint@v1
 ```
 
