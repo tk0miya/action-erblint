@@ -41,6 +41,8 @@ inputs:
   tool_name:
     description: 'Tool name to be displayed in the reviewdog comment. Default: `erb-lint`'
     default: 'erb-lint'
+      Default is .erb_lint.yml.
+    default: '.erb_lint.yml'
 
 runs:
   using: 'composite'
