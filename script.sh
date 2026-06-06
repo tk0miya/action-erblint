@@ -18,9 +18,9 @@ if [ "${INPUT_USE_BUNDLER}" = "true" ]; then
 fi
 
 if [ "${INPUT_USE_BUNDLER}" = "false" ]; then
-  BUNDLE_EXEC=""
+  BUNDLE_EXEC=()
 else
-  BUNDLE_EXEC="bundle exec "
+  BUNDLE_EXEC=(bundle exec)
 fi
 
 if [ -z "${INPUT_CONFIG_FILE}" ]; then
@@ -36,7 +36,7 @@ else
 fi
 
 echo '::group:: Running erb_lint with reviewdog 🐶 ...'
-${BUNDLE_EXEC}erb_lint \
+"${BUNDLE_EXEC[@]}" erb_lint \
   --lint-all \
   --format compact \
   --fail-level F \
