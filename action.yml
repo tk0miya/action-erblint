@@ -41,14 +41,12 @@ inputs:
   tool_name:
     description: 'Tool name to be displayed in the reviewdog comment. Default: `erb_lint`'
     default: 'erb_lint'
-      Default is .erb_lint.yml.
-    default: '.erb_lint.yml'
 
 runs:
   using: 'composite'
   steps:
     - run: $GITHUB_ACTION_PATH/script.sh
-      shell: sh
+      shell: bash
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_LEVEL: ${{ inputs.level }}
